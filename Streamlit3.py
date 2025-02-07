@@ -40,6 +40,7 @@ with st.sidebar:
        st.error("L'username ou le password est/sont incorrect")
    elif st.session_state["authentication_status"] is None:
        st.warning('Les champs username et mot de passe doivent être remplie')
+
 if st.session_state["authentication_status"] is True:
        
    # Création du menu qui va afficher les choix qui se trouvent dans la variable options
@@ -55,20 +56,19 @@ if st.session_state["authentication_status"] is True:
    elif selection == "Photos":
        st.write("Bienvenue sur mon album photo")
       
-if selection == "Photos":
-   col1, col2, col3 = st.columns(3)
+      col1, col2, col3 = st.columns(3)
    
-   with col1:
-     st.header("A cat")
-     st.image("https://static.streamlit.io/examples/cat.jpg")
+      with col1:
+        st.header("A cat")
+        st.image("https://static.streamlit.io/examples/cat.jpg")
    
-   with col2:
-     st.header("A dog")
-     st.image("https://static.streamlit.io/examples/dog.jpg")
-   
-   with col3:
-     st.header("An owl")
-     st.image("https://static.streamlit.io/examples/owl.jpg")
+      with col2:
+        st.header("A dog")
+        st.image("https://static.streamlit.io/examples/dog.jpg")
+      
+      with col3:
+        st.header("An owl")
+        st.image("https://static.streamlit.io/examples/owl.jpg")
 
 
 
