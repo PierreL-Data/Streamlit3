@@ -2,7 +2,7 @@
 
 import streamlit as st
 from streamlit_authenticator import Authenticate
-
+from streamlit_option_menu import option_menu
 # Nos données utilisateurs doivent respecter ce format
 
 lesDonneesDesComptes = {'usernames': {'utilisateur': {'name': 'utilisateur',
@@ -25,10 +25,22 @@ authenticator = Authenticate(
     30, # Le nombre de jours avant que le cookie expire 
 )
 
-import streamlit as st
-# Importation du module
-from streamlit_option_menu import option_menu
+authenticator.login()
 
+def accueil():
+      st.title("Bienvenu sur le contenu réservé aux utilisateurs connectés")
+
+
+if st.session_state["authentication_status"]:
+  accueil()
+  # Le bouton de déconnexion
+  authenticator.logout("Déconnexion")
+
+elif st.session_state["authentication_status"] is False:
+    st.error("L'username ou le password est/sont incorrect")
+elif st.session_state["authentication_status"] is None:
+    st.warning('Les champs username et mot de passe doivent être remplie')
+    
 # Création du menu qui va afficher les choix qui se trouvent dans la variable options
 selection = option_menu(
             menu_title=None,
