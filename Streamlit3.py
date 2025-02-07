@@ -40,6 +40,19 @@ with st.sidebar:
                   menu_title=None,
                   options = ["Accueil", "Photos"]
               )
+            # Using object notation
+     add_selectbox = st.sidebar.selectbox(
+         "How would you like to be contacted?",
+         ("Email", "Home phone", "Mobile phone")
+     )
+      
+      # Using "with" notation
+      with st.sidebar:
+          add_radio = st.radio(
+              "Choose a shipping method",
+              ("Standard (5-15 days)", "Express (2-5 days)")
+          )
+        
      if selection == "Accueil":
          st.write("Bienvenue sur la page d'accueil !")
       
@@ -65,7 +78,7 @@ with st.sidebar:
    elif st.session_state["authentication_status"] is None:
        st.warning('Les champs username et mot de passe doivent être remplis. Merci de ne vous relire dans les quêtes. indice : Mettre utilisateur et utilisateurMDP pour se connecter.')
 
-if st.session_state["authentication_status"]:
+
        
 
 
@@ -75,16 +88,4 @@ if st.session_state["authentication_status"]:
 
 
 
-# Using object notation
-add_selectbox = st.sidebar.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone")
-)
 
-# Using "with" notation
-with st.sidebar:
-    add_radio = st.radio(
-        "Choose a shipping method",
-        ("Standard (5-15 days)", "Express (2-5 days)")
-    )
-  
