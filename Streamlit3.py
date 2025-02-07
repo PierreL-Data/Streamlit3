@@ -52,7 +52,7 @@ with st.sidebar:
        st.write("Bienvenue sur la page d'accueil !")
    elif selection == "Photos":
        st.write("Bienvenue sur mon album photo")
-      col1, col2, col3 = st.columns(3)
+   col1, col2, col3 = st.columns(3)
 
    with col1:
      st.header("A cat")
