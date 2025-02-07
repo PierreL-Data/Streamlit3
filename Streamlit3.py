@@ -39,7 +39,7 @@ with st.sidebar:
    elif st.session_state["authentication_status"] is False:
        st.error("L'username ou le password est/sont incorrect")
    elif st.session_state["authentication_status"] is None:
-       st.warning('Les champs username et mot de passe doivent être remplis. Merci de ne vous relire dans les quêtes. indice : Mettre utilisateur et utilisateurMDR pour se connecter.')
+       st.warning('Les champs username et mot de passe doivent être remplis. Merci de ne vous relire dans les quêtes. indice : Mettre utilisateur et utilisateurMDP pour se connecter.')
 
 if st.session_state["authentication_status"] is True:
        
@@ -60,16 +60,16 @@ if st.session_state["authentication_status"] is True:
        col1, col2, col3 = st.columns(3)
    
        with col1:
-           st.header("A cat")
-           st.image("https://static.streamlit.io/examples/cat.jpg")
+           st.header("C'est ")
+           st.image("https://giphy.com/gifs/thepmc-dg0hVakNxI0LaIQDQm")
    
        with col2:
-           st.header("A dog")
-           st.image("https://static.streamlit.io/examples/dog.jpg")
+           st.header("Vendre")
+           st.image("https://giphy.com/gifs/its-friday-393kszFi2PuCEopURN")
    
        with col3:
-           st.header("An owl")
-           st.image("https://static.streamlit.io/examples/owl.jpg")
+           st.header("di!!!!!!")
+           st.image("https://giphy.com/gifs/butleruniversity-happy-dog-puppy-u2bR9FEoMztbrklifS")
 
 
 
