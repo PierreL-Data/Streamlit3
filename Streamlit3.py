@@ -27,25 +27,25 @@ authenticator = Authenticate(
 with st.sidebar:
    authenticator.login()
 
-def accueil():
-      st.title("Bienvenu sur le contenu réservé aux utilisateurs connectés")
-
-
-if st.session_state["authentication_status"]:
-  accueil()
-  # Le bouton de déconnexion
-  authenticator.logout("Déconnexion")
-
-elif st.session_state["authentication_status"] is False:
-    st.error("L'username ou le password est/sont incorrect")
-elif st.session_state["authentication_status"] is None:
-    st.warning('Les champs username et mot de passe doivent être remplie')
-    
-# Création du menu qui va afficher les choix qui se trouvent dans la variable options
-selection = option_menu(
-            menu_title=None,
-            options = ["Accueil", "Photos"]
-        )
+   def accueil():
+         st.title("Bienvenu sur le contenu réservé aux utilisateurs connectés")
+   
+   
+   if st.session_state["authentication_status"]:
+     accueil()
+     # Le bouton de déconnexion
+     authenticator.logout("Déconnexion")
+   
+   elif st.session_state["authentication_status"] is False:
+       st.error("L'username ou le password est/sont incorrect")
+   elif st.session_state["authentication_status"] is None:
+       st.warning('Les champs username et mot de passe doivent être remplie')
+       
+   # Création du menu qui va afficher les choix qui se trouvent dans la variable options
+   selection = option_menu(
+               menu_title=None,
+               options = ["Accueil", "Photos"]
+           )
 
 # On indique au programme quoi faire en fonction du choix
 if selection == "Accueil":
