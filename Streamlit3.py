@@ -24,8 +24,8 @@ authenticator = Authenticate(
     "cookie key", # La clé du cookie, un str quelconque
     30, # Le nombre de jours avant que le cookie expire 
 )
-
-authenticator.login()
+with st.sidebar:
+   authenticator.login()
 
 def accueil():
       st.title("Bienvenu sur le contenu réservé aux utilisateurs connectés")
@@ -52,7 +52,7 @@ if selection == "Accueil":
     st.write("Bienvenue sur la page d'accueil !")
 elif selection == "Photos":
     st.write("Bienvenue sur mon album photo")
-# ... et ainsi de suite pour les autres pages
+
 
 
 col1, col2, col3 = st.columns(3)
