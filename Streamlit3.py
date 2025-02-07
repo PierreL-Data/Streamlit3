@@ -26,7 +26,6 @@ authenticator = Authenticate(
 )
 # Sidebar pour l'authentification
 with st.sidebar:
-    authenticator = stauth.Authenticate(...)  # Remplace avec ta config d'authentification
     authenticator.login()
 
 # Fonction d'accueil
