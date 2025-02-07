@@ -25,7 +25,7 @@ authenticator = Authenticate(
     30, # Le nombre de jours avant que le cookie expire 
 )
 
-authenticator.login()
+authenticator.sidebar.login()
 
 def accueil():
       st.title("Bienvenu sur le contenu réservé aux utilisateurs connectés")
