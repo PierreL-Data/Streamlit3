@@ -35,6 +35,30 @@ with st.sidebar:
      accueil()
      # Le bouton de déconnexion
      authenticator.logout("Déconnexion")
+         # Création du menu qui va afficher les choix qui se trouvent dans la variable options
+     selection = option_menu(
+                  menu_title=None,
+                  options = ["Accueil", "Photos"]
+              )
+     if selection == "Accueil":
+         st.write("Bienvenue sur la page d'accueil !")
+      
+     elif selection == "Photos":
+         st.write("Bienvenue sur mon album photo")
+          
+         col1, col2, col3 = st.columns(3)
+      
+         with col1:
+             st.header("C'est ")
+             st.image("https://giphy.com/gifs/thepmc-dg0hVakNxI0LaIQDQm")
+      
+         with col2:
+             st.header("Vendre")
+             st.image("https://giphy.com/gifs/its-friday-393kszFi2PuCEopURN")
+      
+         with col3:
+             st.header("di!!!!!!")
+             st.image("https://giphy.com/gifs/butleruniversity-happy-dog-puppy-u2bR9FEoMztbrklifS")
    
    elif st.session_state["authentication_status"] is False:
        st.error("L'username ou le password est/sont incorrect")
@@ -43,33 +67,7 @@ with st.sidebar:
 
 if st.session_state["authentication_status"]:
        
-   # Création du menu qui va afficher les choix qui se trouvent dans la variable options
-   selection = option_menu(
-               menu_title=None,
-               options = ["Accueil", "Photos"]
-           )
 
-
-
-   if selection == "Accueil":
-       st.write("Bienvenue sur la page d'accueil !")
-   
-   elif selection == "Photos":
-       st.write("Bienvenue sur mon album photo")
-       
-       col1, col2, col3 = st.columns(3)
-   
-       with col1:
-           st.header("C'est ")
-           st.image("https://giphy.com/gifs/thepmc-dg0hVakNxI0LaIQDQm")
-   
-       with col2:
-           st.header("Vendre")
-           st.image("https://giphy.com/gifs/its-friday-393kszFi2PuCEopURN")
-   
-       with col3:
-           st.header("di!!!!!!")
-           st.image("https://giphy.com/gifs/butleruniversity-happy-dog-puppy-u2bR9FEoMztbrklifS")
 
 
 
