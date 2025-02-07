@@ -41,7 +41,7 @@ with st.sidebar:
    elif st.session_state["authentication_status"] is None:
        st.warning('Les champs username et mot de passe doivent être remplis. Merci de ne vous relire dans les quêtes. indice : Mettre utilisateur et utilisateurMDP pour se connecter.')
 
-if st.session_state["authentication_status"] is True:
+if st.session_state["authentication_status"]:
        
    # Création du menu qui va afficher les choix qui se trouvent dans la variable options
    selection = option_menu(
