@@ -39,7 +39,7 @@ with st.sidebar:
    elif st.session_state["authentication_status"] is False:
        st.error("L'username ou le password est/sont incorrect")
    elif st.session_state["authentication_status"] is None:
-       st.warning('Les champs username et mot de passe doivent être remplie')
+       st.warning('Les champs username et mot de passe doivent être remplis. Merci de ne vous relire dans les quêtes. indice : Mettre utilisateur et utilisateurMDR pour se connecter.')
 
 if st.session_state["authentication_status"] is True:
        
